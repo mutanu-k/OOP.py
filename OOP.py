@@ -22,7 +22,7 @@ class GamingPhone(Smartphone):
         super().__init__(brand, model, battery)             
         self.gpu = gpu 
 
-     def play_game(self, game):
+    def play_game(self, game):
         if self.battery > 20:
             self.battery -= 20
             return f"Playing {game} on {self.model} with {self.gpu} GPU!"
@@ -35,7 +35,7 @@ def __str__(self):
 
 #Example    
 phone1 = Smartphone("Samsung", "S23", "50")
-phone2 = GamingPgone("Asus", "ROG 7", 80, "Adreno 740")
+phone2 = GamingPhone("Asus", "ROG 7", 80, "Adreno 740")
 
 print(phone1)
 print(phone1.make_call("0712345678"))
@@ -53,6 +53,10 @@ class Vehicle:
 
 class Car(Vehicle):
     def move(self):
+        return "Driving on the road"
+    
+class Plane(Vehicle):
+    def move(self):   
         return "Flying in the sky"  
 
 class Boat(Vehicle):
